@@ -7,16 +7,19 @@ public class Main {
 
     public static void main(String[] args) {
         Kalkulator kalkulator = new Kalkulator();
-        System.out.println("Unesite prvi broj: ");
-
+        double op1;
+        double op2;
+        System.out.print("Unesite prvi broj: ");
         kalkulator.setOperand1(scanner.nextInt());
-        System.out.println("Unesite drugi broj");
+        op1= kalkulator.getOperand1();
+        System.out.print("Unesite drugi broj: ");
         kalkulator.setOperand2(scanner.nextInt());
+        op2= kalkulator.getOperand2();
 
-        System.out.println("Rezultat množenja " + kalkulator.getOperand1() + " i " + kalkulator.getOperand2() + " je " + kalkulator.mul(kalkulator.getOperand1(), kalkulator.getOperand2()));
-        System.out.println("Rezultat dijeljenja " + kalkulator.getOperand1() + " i " + kalkulator.getOperand2() + " je " + kalkulator.div(kalkulator.getOperand1(), kalkulator.getOperand2()));
-        System.out.println("Rezultat sabiranja " + kalkulator.getOperand1() + " i " + kalkulator.getOperand2() + " je " + kalkulator.add(kalkulator.getOperand1(), kalkulator.getOperand2()));
-        System.out.println("Rezultat oduzimanja " + kalkulator.getOperand1() + " i " + kalkulator.getOperand2() + " je " + kalkulator.sub(kalkulator.getOperand1(), kalkulator.getOperand2()));
+        System.out.println("Rezultat množenja " + op1 + " i " + op2+ " je " + kalkulator.mul(op1,op2));
+        System.out.println("Rezultat dijeljenja " + op1 + " i " + op2 + " je " + kalkulator.div(op1,op2));
+        System.out.println("Rezultat sabiranja " + op1 + " i " +op2 + " je " + kalkulator.add(op1, op2));
+        System.out.println("Rezultat oduzimanja " + op1 + " i " + op2 + " je " + kalkulator.sub(op1, op2));
 
 
     }
